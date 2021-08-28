@@ -14,3 +14,5 @@
 # 魔力を回復
 	execute if score @s NSD.MP < @s NSD.MP.Max run scoreboard players add @s NSD.MP.Rcvr.Tmr 1
 	execute if score @s NSD.MP.Rcvr.Tmr >= @s NSD.MP.Rcvr.Dur run function necron.player:recover.mp
+# ゲームから退出したら
+	execute if entity @s[scores={NSD.LeaveGame=1..}] run function necron.player:leave.game
