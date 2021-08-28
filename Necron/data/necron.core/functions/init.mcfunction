@@ -13,3 +13,14 @@
 # 
 #> Scoreboard
 #@public
+	## プレイヤーのステータス
+		### 体力
+			scoreboard objectives add NSD.HP dummy
+			scoreboard objectives add NSD.HP.Max dummy
+			scoreboard objectives add NSD.HP.Rcvr.Tmr dummy
+			scoreboard objectives add NSD.HP.Rcvr.Dur dummy
+		### 魔力
+			scoreboard objectives add NSD.MP dummy
+			scoreboard objectives add NSD.MP.Max dummy
+			scoreboard objectives add NSD.MP.Rcvr.Tmr dummy
+			scoreboard objectives add NSD.MP.Rcvr.Dur dummy
