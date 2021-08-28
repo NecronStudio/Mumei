@@ -4,6 +4,11 @@
 #
 # @within function necron.player:tick
 
+# 
+#> Tag
+#@public
+ #declare tag NSD.Player
+
 # プレイヤーのステータス
 	scoreboard players set @s NSD.Lv 1
 	## 体力
@@ -16,7 +21,3 @@
 		data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NsdStatus set value {HPRcvrPer:5,MPRcvrPer:5,PhyATK:1,MgcATK:{},PhyDEF:0,MgcDEF:{}}
 # 初期化完了
 	tag @s add NSD.Player
-# 
-#> Tag
-#@public
- #declare tag NSD.Player
