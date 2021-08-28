@@ -15,7 +15,9 @@
 #@public
 	scoreboard objectives add NSD.Temp dummy
 	scoreboard objectives add NSD.Const dummy
-	## プレイヤーのステータス
+	## プレイヤーの行動
+		scoreboard objectives add NSD.LeaveGame minecraft.custom:minecraft.leave_game
+	## ステータス
 		scoreboard objectives add NSD.Lv dummy
 		### 体力
 			scoreboard objectives add NSD.HP dummy
