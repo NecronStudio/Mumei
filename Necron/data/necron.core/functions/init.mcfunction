@@ -13,7 +13,10 @@
 # 
 #> Scoreboard
 #@public
+	scoreboard objectives add NSD.Temp dummy
+	scoreboard objectives add NSD.Const dummy
 	## プレイヤーのステータス
+		scoreboard objectives add NSD.Lv dummy
 		### 体力
 			scoreboard objectives add NSD.HP dummy
 			scoreboard objectives add NSD.HP.Max dummy
@@ -24,3 +27,8 @@
 			scoreboard objectives add NSD.MP.Max dummy
 			scoreboard objectives add NSD.MP.Rcvr.Tmr dummy
 			scoreboard objectives add NSD.MP.Rcvr.Dur dummy
+# 
+#> ScoreHolder
+#@public
+ #declare score_holder $NSD.100
+	scoreboard players set $NSD.100 NSD.Const 100
