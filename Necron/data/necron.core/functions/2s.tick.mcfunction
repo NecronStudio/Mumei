@@ -3,9 +3,8 @@
 # ２秒に一回実行
 #
 # @within function necron.core:load
-# @within function necron.player:recover.hp
-# @within function necron.player:recover.mp
-# @within function necron.player:inventory_changed/
+# @within function necron.player:recover/last
+# @within function necron.player:weapon/last
 # @private
 
 # プレイヤーのステータスを表示
