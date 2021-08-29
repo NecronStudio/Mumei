@@ -28,6 +28,8 @@
 			scoreboard objectives add NSD.HP.Add.Chest dummy
 			scoreboard objectives add NSD.HP.Add.Legs dummy
 			scoreboard objectives add NSD.HP.Add.Feet dummy
+			scoreboard objectives add NSD.HP.Add.Main dummy
+			scoreboard objectives add NSD.HP.Add.Off dummy
 		### 魔力
 			scoreboard objectives add NSD.MP dummy
 			scoreboard objectives add NSD.MP.Max dummy
@@ -37,8 +39,12 @@
 			scoreboard objectives add NSD.MP.Add.Chest dummy
 			scoreboard objectives add NSD.MP.Add.Legs dummy
 			scoreboard objectives add NSD.MP.Add.Feet dummy
+			scoreboard objectives add NSD.MP.Add.Main dummy
+			scoreboard objectives add NSD.MP.Add.Off dummy
 		### 攻撃力
 			scoreboard objectives add NSD.ATK dummy
+			scoreboard objectives add NSD.ATK.Add.Main dummy
+			scoreboard objectives add NSD.ATK.Add.Off dummy
 		### 防御力
 			scoreboard objectives add NSD.DEF dummy
 			scoreboard objectives add NSD.DEF.Add.Head dummy
