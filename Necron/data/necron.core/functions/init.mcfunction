@@ -24,11 +24,27 @@
 			scoreboard objectives add NSD.HP.Max dummy
 			scoreboard objectives add NSD.HP.Rcvr.Tmr dummy
 			scoreboard objectives add NSD.HP.Rcvr.Dur dummy
+			scoreboard objectives add NSD.HP.Add.Head dummy
+			scoreboard objectives add NSD.HP.Add.Chest dummy
+			scoreboard objectives add NSD.HP.Add.Legs dummy
+			scoreboard objectives add NSD.HP.Add.Feet dummy
 		### 魔力
 			scoreboard objectives add NSD.MP dummy
 			scoreboard objectives add NSD.MP.Max dummy
 			scoreboard objectives add NSD.MP.Rcvr.Tmr dummy
 			scoreboard objectives add NSD.MP.Rcvr.Dur dummy
+			scoreboard objectives add NSD.MP.Add.Head dummy
+			scoreboard objectives add NSD.MP.Add.Chest dummy
+			scoreboard objectives add NSD.MP.Add.Legs dummy
+			scoreboard objectives add NSD.MP.Add.Feet dummy
+		### 攻撃力
+			scoreboard objectives add NSD.ATK dummy
+		### 防御力
+			scoreboard objectives add NSD.DEF dummy
+			scoreboard objectives add NSD.DEF.Add.Head dummy
+			scoreboard objectives add NSD.DEF.Add.Cest dummy
+			scoreboard objectives add NSD.DEF.Add.Legs dummy
+			scoreboard objectives add NSD.DEF.Add.Feet dummy
 # 
 #> ScoreHolder
 #@public
