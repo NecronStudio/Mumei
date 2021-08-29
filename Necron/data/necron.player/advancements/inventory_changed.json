@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "rewards": {
+        "function": "necron.player:inventory_changed/"
+    }
+}

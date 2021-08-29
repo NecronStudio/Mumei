@@ -4,6 +4,12 @@
 #
 # @within function necron.player:tick
 
+# 
+#> ScoreHolder
+#@private
+ #declare score_holder $NSD.HP.Max.Copy
+ #declare score_holder $NSD.HPRcvrPer.Copy
+
 # スコアをコピー
 	scoreboard players operation $NSD.HP.Max.Copy NSD.Temp = @s NSD.HP.Max
 	execute store result score $NSD.HPRcvrPer.Copy NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NsdStatus.HPRcvrPer
@@ -21,8 +27,3 @@
 # 一時使用ScoreHolderをリセット
 	scoreboard players reset $NSD.HP.Max.Copy
 	scoreboard players reset $NSD.HPRcvrPer.Copy
-# 
-#> ScoreHolder
-#@private
- #declare score_holder $NSD.HP.Max.Copy
- #declare score_holder $NSD.HPRcvrPer.Copy
