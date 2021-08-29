@@ -4,5 +4,7 @@
 #
 # @within tag/function minecraft:tick
 
+
+execute as @a run function necron.player:damage_taken/damage_taken_0
 # プレイヤーで常時実行
 	execute as @a at @s run function necron.player:tick
