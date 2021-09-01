@@ -11,6 +11,8 @@
  #declare score_holder $NSD.Success
 # インベントリーをコピー
 	data modify storage necron: ItemsCopy set from entity @s Inventory
+# デフォルトアイテムの数値を変える
+	execute if data storage necron: ItemsCopy[].tag.Damage run function necron.player:inventory_changed/exchange.default.items/
 # 装備をしていたら
 	execute if data storage necron: ItemsCopy[{Slot:103b}].tag.NsdArmor run function necron.player:inventory_changed/armor/head/
 	execute if data storage necron: ItemsCopy[{Slot:102b}].tag.NsdArmor run function necron.player:inventory_changed/armor/chest/
