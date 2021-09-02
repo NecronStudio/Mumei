@@ -4,7 +4,7 @@
 #
 # @within tag/function minecraft:tick
 
-
-execute as @a run function necron.player:damage_taken/damage_taken_0
+# Entityを初期化
+	execute as @e[type=#necron.entity:living,type=!minecraft:player,tag=!NSD.Entity] run function necron.entity:init
 # プレイヤーで常時実行
 	execute as @a at @s run function necron.player:tick
