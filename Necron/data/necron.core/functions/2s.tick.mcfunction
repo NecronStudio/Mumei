@@ -5,6 +5,7 @@
 # @within function necron.core:load
 # @within function necron.player:recover/last
 # @within function necron.player:weapon/last
+# @within function necron.player:damage.taken/damage.taken.0/damage.taken.0
 # @private
 
 # プレイヤーのステータスを表示
