@@ -51,6 +51,35 @@
 			scoreboard objectives add NSD.DEF.Add.Cest dummy
 			scoreboard objectives add NSD.DEF.Add.Legs dummy
 			scoreboard objectives add NSD.DEF.Add.Feet dummy
+		#### Immersive Citizens Damage Taken
+			scoreboard objectives add NSD.Health.0 dummy
+			scoreboard objectives add NSD.Attribute.0 dummy
+			scoreboard objectives add NSD.Attribute.1 dummy
+			scoreboard objectives add NSD.Damaged.0 minecraft.custom:minecraft.damage_taken
+			scoreboard objectives add NSD.Damaged.1 dummy
+			scoreboard objectives add NSD.S dummy
+			scoreboard objectives add NSD.Protection.0 dummy
+			scoreboard objectives add NSD.Protection.1 dummy
+			scoreboard objectives add NSD.ActiveEffect dummy
+			scoreboard objectives add NSD.GotDamaged dummy
+			scoreboard objectives add NSD.Fuse dummy
+		    scoreboard players set $SS2000000000 NSD.S 2000000000
+			scoreboard players set $SS1000000000 NSD.S 1000000000
+			scoreboard players set $SS100000000 NSD.S 100000000
+			scoreboard players set $S1000 NSD.S 1000
+			scoreboard players set $S100 NSD.S 100
+			scoreboard players set $S10 NSD.S 10
+			scoreboard players set $S-1 NSD.S -1
+			scoreboard players set $S-2 NSD.S -2
+
+
+		#### Immersive Citizens Attack Dealt
+			scoreboard objectives add NSD.Dealt.0 minecraft.custom:minecraft.damage_dealt
+			scoreboard objectives add NSD.Detection.0 dummy
+			scoreboard objectives add NSD.Detection.1 dummy
+			scoreboard objectives add NSD.Detection.2 dummy
+			scoreboard players set $1000000 NSD.S 1000000
+
 # 
 #> ScoreHolder
 #@public

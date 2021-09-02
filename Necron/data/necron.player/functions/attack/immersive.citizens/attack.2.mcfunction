@@ -1,0 +1,13 @@
+#> necron.player:attack/immersive.citizens/attack.2
+#
+# 
+#
+# @within function necron.player:attack/immersive.citizens/attack.0
+
+scoreboard players operation $NSD.Enemy.HP.0 NSD.Temp = @s NSD.HP
+scoreboard players operation $NSD.Enemy.HP.1 NSD.Temp = @s NSD.HP
+scoreboard players operation $NSD.Enemy.DEF NSD.Temp = @s NSD.DEF
+scoreboard players operation $NSD.Enemy.DEF NSD.Temp += $S100 NSD.S
+scoreboard players operation $NSD.Enemy.DEF NSD.Temp /= $S100 NSD.S
+scoreboard players operation $NSD.Enemy.HP.0 NSD.Temp *= $NSD.Enemy.DEF NSD.Temp
+scoreboard players operation $NSD.Enemy.HP.1 NSD.Temp *= $NSD.Enemy.DEF NSD.Temp
