@@ -79,6 +79,7 @@
 			scoreboard objectives add NSD.Detection.1 dummy
 			scoreboard objectives add NSD.Detection.2 dummy
 			scoreboard players set $1000000 NSD.S 1000000
+			scoreboard objectives add NSD.Bow.Use minecraft.used:minecraft.bow
 
 # 
 #> ScoreHolder

@@ -36,11 +36,15 @@ execute as @e[type=!player,tag=MayBeDamaged,distance=..7] at @s if score @s NSD.
 # Citizen 4 
 execute as @e[type=!player] if score @s NSD.HP matches ..0 run kill @s
 
+# Citizen 6
+execute as @e[type=!player] if score @s NSD.HP matches ..0 run kill @s
+
 # Reset Folder
 scoreboard players reset $NSD.Enemy.HP.0 NSD.Temp
 scoreboard players reset $NSD.Enemy.HP.1 NSD.Temp
 scoreboard players reset $NSD.Enemy.DEF NSD.Temp
 
+# Left
 kill @e[type=armor_stand,tag=NSD.Damage]
 tag @e[tag=MayBeDamaged] remove MayBeDamaged
 scoreboard players reset @s NSD.Dealt.0
