@@ -1,0 +1,37 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cod",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name": [
+								{
+									"text": "HP回復割合 +",
+									"color": "light_purple",
+									"italic": false
+								},
+								{
+									"storage": "necron:",
+									"nbt": "Accessory.tag.NsdStatus.HPRcvrPer"
+								},
+								{
+									"text": "%"
+								}
+							]
+						},
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{NsdRemove:1b}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
