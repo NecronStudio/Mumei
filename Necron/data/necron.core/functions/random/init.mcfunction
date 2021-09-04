@@ -9,16 +9,14 @@
 #@private
  #declare tag NSD.Marker
 # マーカーを召喚
-	execute in minecraft:overworld run summon minecraft:marker 512 0 512 {Tags:["NSD.Marker"]}
+	execute in minecraft:overworld run summon minecraft:marker 0 0 0 {Tags:["NSD.Marker"]}
 # 値を取得
-	execute in minecraft:overworld positioned 512 0 512 as @e[type=minecraft:marker,tag=NSD.Marker,distance=..0.001] store result score $NSD.Rand.Current NSD.Global run data get entity @s UUID[0]
+	execute in minecraft:overworld positioned 0 0 0 as @e[type=minecraft:marker,tag=NSD.Marker,distance=..0.001] store result score $NSD.Rand.Current NSD.Global run data get entity @s UUID[0]
 	scoreboard players operation $NSD.Rand.Current NSD.Global %= $NSD.2^16 NSD.Const
 	scoreboard players add $NSD.Rand.Current NSD.Global 1
 
-	execute in minecraft:overworld positioned 512 0 512 as @e[type=minecraft:marker,tag=NSD.Marker,distance=..0.001] store result score $NSD.Rand.Carry NSD.Global run data get entity @s UUID[1]
+	execute in minecraft:overworld positioned 0 0 0 as @e[type=minecraft:marker,tag=NSD.Marker,distance=..0.001] store result score $NSD.Rand.Carry NSD.Global run data get entity @s UUID[1]
 	scoreboard players operation $NSD.Rand.Carry NSD.Global %= $NSD.2^16 NSD.Const
 	scoreboard players add $NSD.Rand.Carry NSD.Global 1
 # マーカーを消す
-	execute in minecraft:overworld positioned 512 0 512 run kill @e[type=minecraft:marker,tag=NSD.Marker,distance=..0.001]
-# チャンク読み込みを止める
-	execute in minecraft:overworld run forceload remove 512 512
+	execute in minecraft:overworld positioned 0 0 0 run kill @e[type=minecraft:marker,tag=NSD.Marker,distance=..0.001]
