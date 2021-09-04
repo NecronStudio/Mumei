@@ -19,5 +19,7 @@
 # 武器
 	## 持っていたら
 		execute if data entity @s SelectedItem.tag.NsdWeapon run function necron.player:weapon/mainhand/
+		execute if data entity @s Inventory[{Slot:-106b}].tag.NsdWeapon run function necron.player:weapon/offhand/
 	## 持っていなかったら
-		execute if entity @s[tag=NSD.Having.Mainhand] unless data entity @s SelectedItem.tag.NsdWeapon run function necron.player:weapon/mainhand/reset
+		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand unless data entity @s SelectedItem.tag.NsdWeapon run function necron.player:weapon/mainhand/reset
+		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Offhand unless data entity @s Inventory[{Slot:-106b}].tag.NsdWeapon run function necron.player:weapon/offhand/reset

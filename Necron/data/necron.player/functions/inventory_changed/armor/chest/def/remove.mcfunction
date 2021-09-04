@@ -3,11 +3,10 @@
 # 防御力を減少
 #
 # @within function necron.player:inventory_changed/armor/chest/
-# @within function necron.player:inventory_changed/armor/chest/reset
 
-# 最大体力を元に戻す
-	scoreboard players operation @s NSD.DEF -= @s NSD.DEF.Add.Cest
-# スコアをリセット
-	scoreboard players reset @s NSD.DEF.Add.Cest
+# 防御力を元に戻す
+	scoreboard players operation @s NSD.DEF -= $NSD.Value NSD.Temp
+# 追加防御力をリセット
+	data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Armor.Chest.DEF
 # 変えたことを記録
 	execute unless score $NSD.Success NSD.Temp matches 1 run scoreboard players set $NSD.Success NSD.Temp 1
