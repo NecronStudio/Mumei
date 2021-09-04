@@ -13,13 +13,8 @@
 	data modify storage necron: Accessory set from storage necron: Accessories[0]
 # 追加効果を付ける
 	function necron.player:inventory_changed/accessory/give/exchange/status.loop
-# レアリティを他の場所に移す(３回Loreを消してるのはミスじゃないﾖ)
-	data modify storage necron: Rarity append from storage necron: Accessory.tag.display.Lore[-3]
-	data modify storage necron: Rarity append from storage necron: Accessory.tag.display.Lore[-2]
-	data modify storage necron: Rarity append from storage necron: Accessory.tag.display.Lore[-1]
-	data remove storage necron: Accessory.tag.display.Lore[-1]
-	data remove storage necron: Accessory.tag.display.Lore[-1]
-	data remove storage necron: Accessory.tag.display.Lore[-1]
+# 説明を消す
+	data remove storage necron: Accessory.tag.display.Lore
 # 説明を追加
 	# 説明を書いたアイテムを召喚
 		execute if data storage necron: Accessory.tag.NsdStatus.HP run loot spawn ~ ~ ~ loot necron.player:accessory/hp
@@ -32,8 +27,18 @@
 		execute as @e[type=minecraft:item,distance=..0.001] if data entity @s Item.tag.NsdRemove run data modify storage necron: Accessory.tag.display.Lore append from entity @s Item.tag.display.Name
 	# アイテムを消す
 		execute as @e[type=minecraft:item,distance=..0.001] if data entity @s Item.tag.NsdRemove run kill @s
-# レアリティを元に戻す
-	data modify storage necron: Accessory.tag.display.Lore append from storage necron: Rarity[]
+# アイテムの情報を付ける
+	data modify storage necron: Accessory.tag.display.Lore append value '{"text":""}'
+	# 部位
+		execute if data storage necron: Accessory.tag.NsdNecklace run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"[ネックレス]","color":"gray","italic":false}'
+		execute if data storage necron: Accessory.tag.NsdBracelet run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"[ブレスレット]","color":"gray","italic":false}'
+		execute if data storage necron: Accessory.tag.NsdRing run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"[リング]","color":"gray","italic":false}'
+	# レアリティ
+		execute if data storage necron: {Accessory:{tag:{Rarity:"Common"}}} run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"Common","color":"white","bold":true,"italic":false}'
+		execute if data storage necron: {Accessory:{tag:{Rarity:"Uncommon"}}} run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"Uncommon","color":"green","bold":true,"italic":false}'
+		execute if data storage necron: {Accessory:{tag:{Rarity:"Rare"}}} run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"Rare","color":"blue","bold":true,"italic":false}'
+		execute if data storage necron: {Accessory:{tag:{Rarity:"Epic"}}} run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"Epic","color":"yellow","bold":true,"italic":false}'
+		execute if data storage necron: {Accessory:{tag:{Rarity:"Legendary"}}} run data modify storage necron: Accessory.tag.display.Lore append value '{"text":"Legendary","color":"red","bold":true,"italic":false}'
 # アイテムを返す
 	execute store result score $NSD.Slot NSD.Temp run data get storage necron: Accessory.Slot
 	data remove storage necron: Accessory.Slot
