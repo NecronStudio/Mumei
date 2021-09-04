@@ -30,9 +30,9 @@ execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run function necron.pl
 # Citizen 1
 execute as @e[type=!player,tag=MayBeDamaged,distance=..7] at @s if score @s NSD.Detection.0 matches 1 run function necron.player:attack/immersive.citizens/attack.matches.1
 # Citizen 2
-execute as @e[type=!player,tag=MayBeDamaged,distance=..7] at @s if score @s NSD.Detection.0 matches 2 run function necron.player:attack/immersive.citizens/attack.matches.2
+execute as @e[type=!player,tag=MayBeDamaged,distance=..7] at @s if score @s NSD.Detection.0 matches 2 run function necron.player:attack/immersive.citizens/attack.matches.1
 # Citizen 3
-execute as @e[type=!player,tag=MayBeDamaged,distance=..7] at @s if score @s NSD.Detection.0 matches 3 run function necron.player:attack/immersive.citizens/attack.matches.3
+execute as @e[type=!player,tag=MayBeDamaged,distance=..7] at @s if score @s NSD.Detection.0 matches 3 run function necron.player:attack/immersive.citizens/attack.matches.1
 # Citizen 4 
 execute as @e[type=!player] if score @s NSD.HP matches ..0 run kill @s
 

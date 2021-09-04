@@ -16,6 +16,9 @@ execute if score @s NSD.Dealt.0 matches 1.. run function necron.player:attack/im
 # Citizens for arrow
 execute if data entity @s {SelectedItem:{id:"minecraft:bow",Count:1b,tag:{NsdWeapon:1b}}} if score @s NSD.Bow.Use matches 1.. run function necron.player:attack/immersive.citizens/attack.matches.4
 execute as @e[type=!player] if data entity @s ActiveEffects[{Id:26b}] run function necron.player:attack/immersive.citizens/attack.citizen.arrow
+execute if data entity @s {SelectedItem:{id:"minecraft:crossbow",Count:1b,tag:{NsdWeapon:1b}}} if score @s NSD.Crossbow.Use matches 1.. run function necron.player:attack/immersive.citizens/attack.matches.4
+execute as @e[type=!player] if data entity @s ActiveEffects[{Id:26b}] run function necron.player:attack/immersive.citizens/attack.citizen.arrow
 
 # Reset
 scoreboard players reset @s NSD.Bow.Use
+scoreboard players reset @s NSD.Crossbow.Use
