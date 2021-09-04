@@ -1,0 +1,34 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cod",
+					"functions": [
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name": [
+								{
+									"text": "MP +",
+									"color": "aqua",
+									"italic": false
+								},
+								{
+									"storage": "necron:",
+									"nbt": "Accessory.tag.NsdStatus.MP"
+								}
+							]
+						},
+						{
+							"function": "minecraft:set_nbt",
+							"tag": "{NsdRemove:1b}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
