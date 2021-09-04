@@ -5,9 +5,9 @@
 # @within function necron.core:tick
 
 # ftfrsgtdeddz
-scoreboard players operation $S2000000000 NSD.S = $SS2000000000 NSD.S
-scoreboard players operation $S1000000000 NSD.S = $SS1000000000 NSD.S
-scoreboard players operation $S100000000 NSD.S = $SS100000000 NSD.S
+scoreboard players operation $NSD.2000000000 NSD.S = $NSD.2000000000 NSD.Const
+scoreboard players operation $NSD.1000000000 NSD.S = $NSD.1000000000 NSD.Const
+scoreboard players operation $NSD.100000000 NSD.S = $NSD.100000000 NSD.Const
 
 # dehvfrgtjthc(gtdbse skelett gqfb)
 execute as @e[type=!player,type=!skeleton] at @s run attribute @s minecraft:generic.attack_damage base set 10.0
