@@ -7,6 +7,6 @@
 # MayBeDamaged Citizens
 execute as @e[type=!player,tag=MayBeDamaged,distance=..7] store result score @s NSD.Detection.0 run data get entity @s Health 1000000
 execute as @e[type=!player,tag=MayBeDamaged,distance=..7] store result score @s NSD.Detection.0 run scoreboard players operation @s NSD.Detection.2 -= @s NSD.Detection.0
-execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.2 /= $S1000000 NSD.S
-execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.2 *= $S1000000 NSD.S
+execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.2 /= $NSD.1000000 NSD.Const
+execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.2 *= $NSD.1000000 NSD.Const
 execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.0 -= @s NSD.Detection.2
