@@ -4,35 +4,36 @@
 #
 # @within function necron.player:tick
 
-# 
-#> Tag
-#@within function necron.player:weapon/mainhand/**
-#@within function necron.player:tick
- #declare tag NSD.Having.Mainhand
 # メインハンドをコピー
-	data modify storage necron: ItemsCopy set from entity @s SelectedItem
-# 体力
-	## 値を取得
-	execute if data storage necron: ItemsCopy.tag.NsdStatus.HP store result score $NSD.Amount NSD.Temp run data get storage necron: ItemsCopy.tag.NsdStatus.HP
-	## 前に持っていた値より大きかったら
-	execute if data storage necron: ItemsCopy.tag.NsdStatus.HP unless score @s NSD.HP.Add.Main = $NSD.Amount NSD.Temp run function necron.player:weapon/mainhand/hp/add
-	## 増加が無かったら
-	execute if entity @s[scores={NSD.HP.Add.Main=..2147483647}] unless data storage necron: ItemsCopy.tag.NsdStatus.HP run function necron.player:weapon/mainhand/hp/remove
-# 魔力
-	## 値を取得
-	execute if data storage necron: ItemsCopy.tag.NsdStatus.MP store result score $NSD.Amount NSD.Temp run data get storage necron: ItemsCopy.tag.NsdStatus.MP
-	## 前に持っていた値より大きかったら
-	execute if data storage necron: ItemsCopy.tag.NsdStatus.MP unless score @s NSD.MP.Add.Main = $NSD.Amount NSD.Temp run function necron.player:weapon/mainhand/mp/add
-	## 増加が無かったら
-	execute if entity @s[scores={NSD.MP.Add.Main=..2147483647}] unless data storage necron: ItemsCopy.tag.NsdStatus.MP run function necron.player:weapon/mainhand/mp/remove
-# 防御力
-	## 値を取得
-	execute if data storage necron: ItemsCopy.tag.NsdStatus.ATK store result score $NSD.Amount NSD.Temp run data get storage necron: ItemsCopy.tag.NsdStatus.ATK
-	## 前に持っていた値より大きかったら
-	execute if data storage necron: ItemsCopy.tag.NsdStatus.ATK unless score @s NSD.ATK.Add.Main = $NSD.Amount NSD.Temp run function necron.player:weapon/mainhand/atk/add
-	## 増加が無かったら
-	execute if entity @s[scores={NSD.ATK.Add.Main=..2147483647}] unless data storage necron: ItemsCopy.tag.NsdStatus.ATK run function necron.player:weapon/mainhand/atk/remove
-# Tagを付ける
-	tag @s add NSD.Having.Mainhand
-# 総合処理
+	data modify storage necron: Items set from entity @s SelectedItem
+# 最大体力
+	# 追加値を取得
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.HPMax store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.HPMax
+	# 増加が無かったら
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.HPMax unless data storage necron: Items.tag.NSD.Status.HPMax run function necron.player:weapon/mainhand/hp.max/remove
+	# 値を取得
+	execute if data storage necron: Items.tag.NSD.Status.HPMax store result score $NSD.Amount NSD.Temp run data get storage necron: Items.tag.NSD.Status.HPMax
+	# 前に持っていた値より大きかったら
+	execute if data storage necron: Items.tag.NSD.Status.HPMax unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:weapon/mainhand/hp.max/add
+# 最大魔力
+	# 追加値を取得
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.MPMax store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.MPMax
+	# 増加が無かったら
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.MPMax unless data storage necron: Items.tag.NSD.Status.MPMax run function necron.player:weapon/mainhand/mp.max/remove
+	# 値を取得
+	execute if data storage necron: Items.tag.NSD.Status.MPMax store result score $NSD.Amount NSD.Temp run data get storage necron: Items.tag.NSD.Status.MPMax
+	# 前に持っていた値より大きかったら
+	execute if data storage necron: Items.tag.NSD.Status.MPMax unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:weapon/mainhand/mp.max/add
+# 攻撃力
+	# 追加値を取得
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.ATK store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.ATK
+	# 増加が無かったら
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Weapon.Mainhand.ATK unless data storage necron: Items.tag.NSD.Status.ATK run function necron.player:weapon/mainhand/atk/remove
+	# 値を取得
+	execute if data storage necron: Items.tag.NSD.Status.ATK store result score $NSD.Amount NSD.Temp run data get storage necron: Items.tag.NSD.Status.ATK
+	# 前に持っていた値より大きかったら
+	execute if data storage necron: Items.tag.NSD.Status.ATK unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:weapon/mainhand/atk/add
+# 最後の処理
 	function necron.player:weapon/last
+# 一時使用ScoreHolderをリセット
+	execute if score $NSD.Value NSD.Temp matches ..2147483647 run scoreboard players reset $NSD.Value
