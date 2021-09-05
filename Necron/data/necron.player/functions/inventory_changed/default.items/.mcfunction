@@ -5,9 +5,8 @@
 # @within function necron.player:inventory_changed/
 
 # 登録されてない武器or防具
-	data modify storage necron: DamageItems append from storage necron: ItemsCopy[{tag:{}}]
-	data remove storage necron: DamageItems[{tag:{NsdArmor:1b}}]
-	data remove storage necron: DamageItems[{tag:{NsdWeapon:1b}}]
+	data modify storage necron: DamageItems append from storage necron: Items[{tag:{}}]
+	data remove storage necron: DamageItems[{tag:{NSD:{Status:{}}}}]
 # アイテムを返す
 	execute if data storage necron: DamageItems[] run function necron.player:inventory_changed/default.items/exchange/loop
 # 一時使用Storageをリセット

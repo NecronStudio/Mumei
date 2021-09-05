@@ -18,7 +18,7 @@
 								},
 								{
 									"storage": "necron:",
-									"nbt": "Accessory.tag.NsdStatus.DEF"
+									"nbt": "Accessory.tag.NSD.Status.DEF"
 								}
 							]
 						},

@@ -5,8 +5,8 @@
 # @within function necron.player:inventory_changed/
 
 # 登録されてないアクセサリー
-	data modify storage necron: Accessories append from storage necron: ItemsCopy[{tag:{NsdAccessory:1b}}]
-	data remove storage necron: Accessories[{tag:{NsdStatus:{}}}]
+	data modify storage necron: Accessories append from storage necron: Items[{tag:{NSD:{Accessory:1b}}}]
+	data remove storage necron: Accessories[{tag:{NSD:{Status:{}}}}]
 # アクセサリーの追加効果＆返す
 	execute if data storage necron: Accessories[] run function necron.player:inventory_changed/accessory/give/exchange/loop
 # 一時使用Storageをリセット
