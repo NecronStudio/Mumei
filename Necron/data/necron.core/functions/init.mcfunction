@@ -35,6 +35,10 @@
 			scoreboard objectives add NSD.ATK dummy
 		### 防御力
 			scoreboard objectives add NSD.DEF dummy
+			scoreboard objectives add NSD.Crossbow.Use minecraft.used:minecraft.crossbow
+		#### Immersive Citizens Weapon Throwing
+			scoreboard objectives add NSD.WT.Sneak minecraft.custom:minecraft.sneak_time
+			
 	## Immersive Citizens Damage Taken
 		scoreboard objectives add NSD.Health.0 dummy
 		scoreboard objectives add NSD.Attribute.0 dummy

@@ -1,14 +1,14 @@
 # jt;wse::fzlt
 execute store result score @s NSD.Health.0 run data get entity @s Health 100000000
-scoreboard players operation $S2000000000 NSD.S -= @s NSD.Health.0
+scoreboard players operation $NSD.2000000000 NSD.S -= @s NSD.Health.0
 execute store result score $NSD.Health.1 NSD.Health.0 run data get entity @s Health 1
-scoreboard players operation $NSD.Health.1 NSD.Health.0 *= $S100000000 NSD.S
-scoreboard players operation $S1000000000 NSD.S -= $S2000000000 NSD.S
-execute if score $S1000000000 NSD.S matches 1.. run scoreboard players operation $S1000000000 NSD.S /= $NSD.1000 NSD.Const
-execute if score $S1000000000 NSD.S matches 1.. run scoreboard players operation $S1000000000 NSD.S /= $NSD.100 NSD.Const
-execute if score $S1000000000 NSD.S matches 1.. store result score @s NSD.GotDamaged run scoreboard players operation $S1000000000 NSD.S /= $NSD.100 NSD.Const
-execute if score $S1000000000 NSD.S matches ..-1 run scoreboard players operation $S1000000000 NSD.S /= $NSD.100 NSD.Const
-execute if score $S1000000000 NSD.S matches ..-1 store result score @s NSD.GotDamaged run scoreboard players operation $S1000000000 NSD.S *= $NSD.-1 NSD.Const
+scoreboard players operation $NSD.Health.1 NSD.Health.0 *= $NSD.100000000 NSD.S
+scoreboard players operation $NSD.1000000000 NSD.S -= $NSD.2000000000 NSD.S
+execute if score $NSD.1000000000 NSD.S matches 1.. run scoreboard players operation $NSD.1000000000 NSD.S /= $NSD.1000 NSD.Const
+execute if score $NSD.1000000000 NSD.S matches 1.. run scoreboard players operation $NSD.1000000000 NSD.S /= $NSD.100 NSD.Const
+execute if score $NSD.1000000000 NSD.S matches 1.. store result score @s NSD.GotDamaged run scoreboard players operation $NSD.1000000000 NSD.S /= $NSD.100 NSD.Const
+execute if score $NSD.1000000000 NSD.S matches ..-1 run scoreboard players operation $NSD.1000000000 NSD.S /= $NSD.100 NSD.Const
+execute if score $NSD.1000000000 NSD.S matches ..-1 store result score @s NSD.GotDamaged run scoreboard players operation $NSD.1000000000 NSD.S *= $NSD.-1 NSD.Const
 
 execute store result score @s NSD.ActiveEffect run data get entity @s ActiveEffects[{Id:20b}].Duration
 execute if score @s NSD.ActiveEffect matches 1.. store result score @s NSD.GotDamaged run scoreboard players get @s NSD.ActiveEffect
@@ -30,7 +30,7 @@ scoreboard players operation $NSD.Citizens.HP.0 NSD.Temp *= $NSD.100 NSD.Const
 scoreboard players operation $NSD.Citizens.HP.0 NSD.Temp /= $NSD.Citizens.HP.1 NSD.Temp
 scoreboard players operation @s NSD.HP *= $NSD.Citizens.HP.0 NSD.Temp
 scoreboard players operation @s NSD.HP /= $NSD.100 NSD.Const
-execute if score @s NSD.HP matches ..0 run kill @s
+#execute if score @s NSD.HP matches ..0 run kill @s
 execute if score @s NSD.HP matches ..0 run scoreboard players operation @s NSD.HP = @s NSD.HP.Max
 function necron.core:2s.tick
 effect give @s minecraft:instant_health 1 100 true
