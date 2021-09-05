@@ -51,6 +51,7 @@
 		scoreboard objectives add NSD.ActiveEffect dummy
 		scoreboard objectives add NSD.GotDamaged dummy
 		scoreboard objectives add NSD.Fuse dummy
+		
 	## Immersive Citizens Attack Dealt
 		scoreboard objectives add NSD.Dealt.0 minecraft.custom:minecraft.damage_dealt
 		scoreboard objectives add NSD.Detection.0 dummy
