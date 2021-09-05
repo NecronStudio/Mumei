@@ -64,7 +64,8 @@
 		scoreboard objectives add NSD.UC.Count.0 dummy
 		scoreboard objectives add NSD.UC.Time.0 dummy
 		scoreboard objectives add NSD.UC.Jump.0 minecraft.custom:minecraft.jump
-
+	## Immersive Citizens Difficulter
+		scoreboard objectives add NSD.Difficulty dummy
 #> ScoreHolder
 #@public
  #declare score_holder $NSD.-1
