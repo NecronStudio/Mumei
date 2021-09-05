@@ -18,8 +18,11 @@ execute as @e[type=armor_stand,tag=NSD.WT.0] at @s run function necron.player:we
 	execute as @a at @s run function necron.player:damage.taken/damage.taken.0
 	execute as @a at @s run function necron.player:damage.taken/protection
 
-# 攻撃の会
+# 攻撃
 	execute as @a at @s run function necron.player:attack/attack.0
 
+# Ultimate Combat	
+	execute as @a at @s run function necron.player:ultimate.combat/uc.sword
+	
 # プレイヤーで常時実行
 	execute as @a run function necron.player:tick

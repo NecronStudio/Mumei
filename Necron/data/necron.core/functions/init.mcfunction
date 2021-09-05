@@ -51,13 +51,20 @@
 		scoreboard objectives add NSD.ActiveEffect dummy
 		scoreboard objectives add NSD.GotDamaged dummy
 		scoreboard objectives add NSD.Fuse dummy
+		
 	## Immersive Citizens Attack Dealt
 		scoreboard objectives add NSD.Dealt.0 minecraft.custom:minecraft.damage_dealt
 		scoreboard objectives add NSD.Detection.0 dummy
 		scoreboard objectives add NSD.Detection.1 dummy
 		scoreboard objectives add NSD.Detection.2 dummy
 		scoreboard objectives add NSD.Bow.Use minecraft.used:minecraft.bow
-# 
+
+	## Ultimate Combat
+		scoreboard objectives add NSD.UC.Dealt.0 minecraft.custom:minecraft.damage_dealt
+		scoreboard objectives add NSD.UC.Count.0 dummy
+		scoreboard objectives add NSD.UC.Time.0 dummy
+		scoreboard objectives add NSD.UC.Jump.0 minecraft.custom:minecraft.jump
+
 #> ScoreHolder
 #@public
  #declare score_holder $NSD.-1
