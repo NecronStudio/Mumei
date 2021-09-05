@@ -30,7 +30,7 @@ scoreboard players operation $NSD.Citizens.HP.0 NSD.Temp *= $NSD.100 NSD.Const
 scoreboard players operation $NSD.Citizens.HP.0 NSD.Temp /= $NSD.Citizens.HP.1 NSD.Temp
 scoreboard players operation @s NSD.HP *= $NSD.Citizens.HP.0 NSD.Temp
 scoreboard players operation @s NSD.HP /= $NSD.100 NSD.Const
-#execute if score @s NSD.HP matches ..0 run kill @s
+execute if score @s NSD.HP matches ..0 run kill @s
 execute if score @s NSD.HP matches ..0 run scoreboard players operation @s NSD.HP = @s NSD.HP.Max
 function necron.core:2s.tick
 effect give @s minecraft:instant_health 1 100 true
