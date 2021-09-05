@@ -10,4 +10,3 @@ execute as @e[type=!player,tag=MayBeDamaged,distance=..7] store result score @s 
 execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.2 /= $NSD.1000000 NSD.Const
 execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.2 *= $NSD.1000000 NSD.Const
 execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run scoreboard players operation @s NSD.Detection.0 -= @s NSD.Detection.2
-data modify entity @s Health set value 10000f
