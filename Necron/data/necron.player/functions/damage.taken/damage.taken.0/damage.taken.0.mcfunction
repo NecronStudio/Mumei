@@ -1,5 +1,6 @@
 # jt;wse::fzlt
 execute store result score @s NSD.Health.0 run data get entity @s Health 100000000
+tellraw @s {"score":{"name":"*","objective":"NSD.Health.0"}}
 scoreboard players operation $NSD.2000000000 NSD.S -= @s NSD.Health.0
 execute store result score $NSD.Health.1 NSD.Health.0 run data get entity @s Health 1
 scoreboard players operation $NSD.Health.1 NSD.Health.0 *= $NSD.100000000 NSD.S
