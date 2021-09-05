@@ -45,6 +45,7 @@ scoreboard players reset $NSD.Enemy.HP.1 NSD.Temp
 scoreboard players reset $NSD.Enemy.DEF NSD.Temp
 
 # Left
+execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run data modify entity @s Health set value 10000f
 kill @e[type=armor_stand,tag=NSD.Damage]
 tag @e[tag=MayBeDamaged] remove MayBeDamaged
 scoreboard players reset @s NSD.Dealt.0

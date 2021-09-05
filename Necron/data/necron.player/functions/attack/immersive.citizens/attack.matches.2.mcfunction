@@ -9,4 +9,5 @@ scoreboard players operation $NSD.Enemy.HP.0 NSD.Temp *= $NSD.100 NSD.Const
 scoreboard players operation $NSD.Enemy.HP.0 NSD.Temp /= $NSD.Enemy.HP.1 NSD.Temp
 scoreboard players operation @s NSD.HP *= $NSD.Enemy.HP.0 NSD.Temp
 scoreboard players operation @s NSD.HP /= $NSD.100 NSD.Const
+data modify entity @s Health set value 10000f
 execute if score @s NSD.HP matches ..0 run kill @s

@@ -7,6 +7,8 @@
 # Settings
 attribute @s minecraft:generic.attack_damage base set 0.000001
 attribute @s minecraft:generic.attack_speed base set 1000
+execute as @e[type=!player,type=!item] run attribute @s minecraft:generic.armor base set -2147483647
+execute as @e[type=!player,type=!item] run attribute @s minecraft:generic.armor_toughness base set -2147483647
 
 # Citizens(Command) Detect at players attacked  
 execute store result score @e[type=!player,distance=..5] NSD.Detection.2 run data get entity @s Health 1000000

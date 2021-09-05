@@ -8,6 +8,7 @@
  #declare tag NSD.GotDamaged 
 
 # Citizens for Throwing
+execute if data entity @e[type=item,distance=..1.482,sort=nearest,limit=1] Thrower run playsound minecraft:entity.player.attack.weak player @s ~ ~ ~ 2 0.5
 execute if data entity @e[type=item,distance=..1.482,sort=nearest,limit=1] Thrower run summon armor_stand ~ ~ ~ {Tags:["NSD.WT.0"],ShowArms:1b,Pose:{RightArm:[-10f,0f,-90f]},Invisible:1b}
 execute if data entity @e[type=item,distance=..1.482,sort=nearest,limit=1] Thrower positioned 0.00 0.00 0.00 run summon armor_stand ^ ^ ^2.5 {Tags:["NSD.WT.Pos"],NoGravity:1b}
 tp @e[type=armor_stand,tag=NSD.WT.0,distance=..1,sort=nearest,limit=1] ^ ^ ^-0.01 facing entity @s
