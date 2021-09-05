@@ -1,7 +1,7 @@
 #> necron.give:accessory/bracelet
 #
-# ブレスレット
+# ブレスレットの参考
 #
 # @private
 
-	give @s minecraft:diamond{display:{Name:'{"text":"ダイアモンドのブレスレット","color":"aqua","italic":false}'},NsdAccessory:1b,NsdBracelet:1b,Rarity:"Common"}
+	give @s minecraft:diamond{display:{Name:'{"text":"ダイアモンドのブレスレット","color":"aqua","italic":false}'},NSD:{Slot:["Wrist"],Rarity:"Common",Accessory:1b}}
