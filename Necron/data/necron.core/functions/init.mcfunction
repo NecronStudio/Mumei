@@ -38,6 +38,7 @@
 			scoreboard objectives add NSD.Crossbow.Use minecraft.used:minecraft.crossbow
 		#### Immersive Citizens Weapon Throwing
 			scoreboard objectives add NSD.WT.Sneak minecraft.custom:minecraft.sneak_time
+			scoreboard objectives add NSD.S dummy
 			
 	## Immersive Citizens Damage Taken
 		scoreboard objectives add NSD.Health.0 dummy
