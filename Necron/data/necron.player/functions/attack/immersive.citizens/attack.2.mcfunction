@@ -2,9 +2,7 @@
 #
 # 
 #
-# @within function necron.player:attack/immersive.citizens/attack.0
-# @within function necron.player:attack/immersive.citizens/attack.citizen.arrow
-# @within function necron.player:weapon.throwing/weapon.throwing.2
+# @public
 
 scoreboard players operation $NSD.Enemy.HP.0 NSD.Temp = @s NSD.HP
 scoreboard players operation $NSD.Enemy.HP.1 NSD.Temp = @s NSD.HP
