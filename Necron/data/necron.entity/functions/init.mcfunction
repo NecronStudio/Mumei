@@ -9,7 +9,7 @@
 #@public
  #declare tag NSD.Entity
 # 帽子を他の場所に移す
-	execute if data entity @s ArmorItems[3].tag.NsdArmor run data modify storage necron: Status set from storage necron: ArmorItems[3].tag
+	execute if data entity @s ArmorItems[3].tag.NsdArmor run data modify storage necron: Status set from entity @s ArmorItems[3].tag
 # ステータスを与える
 	# 体力
 		execute if data storage necron: Status.NsdStatus.HP store result score @s NSD.HP store result score @s NSD.HP.Max run data get storage necron: Status.NsdStatus.HP
