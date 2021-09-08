@@ -33,6 +33,8 @@
 			scoreboard objectives add NSD.MP.Rcvr.Per dummy
 		### 攻撃力
 			scoreboard objectives add NSD.ATK dummy
+			scoreboard objectives add NSD.Crit.Damage dummy
+			scoreboard objectives add NSD.Crit.Chance dummy
 		### 防御力
 			scoreboard objectives add NSD.DEF dummy
 			scoreboard objectives add NSD.Crossbow.Use minecraft.used:minecraft.crossbow

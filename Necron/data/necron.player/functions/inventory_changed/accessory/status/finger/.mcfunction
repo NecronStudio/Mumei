@@ -58,5 +58,23 @@
 		execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.ATK store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:11b}].tag.NSD.Status.ATK
 	# 前に持っていた値より大きかったら
 		execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.ATK unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/finger/atk/add
+# クリティカル確率
+	# 追加値を取得
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Ring.CritChance store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Ring.CritChance
+	# 増加が無かったら
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Ring.CritChance unless data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritChance run function necron.player:inventory_changed/accessory/status/finger/crit.chance/remove
+	# 値を取得
+	execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritChance store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:11b}].tag.NSD.Status.CritChance
+	# 前に持っていた値より大きかったら
+	execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritChance unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/finger/crit.chance/add
+# クリティカル確率
+	# 追加値を取得
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Ring.CritDamage store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Ring.CritDamage
+	# 増加が無かったら
+	execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Ring.CritDamage unless data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritDamage run function necron.player:inventory_changed/accessory/status/finger/crit.damage/remove
+	# 値を取得
+	execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritDamage store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:11b}].tag.NSD.Status.CritDamage
+	# 前に持っていた値より大きかったら
+	execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritDamage unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/finger/crit.damage/add
 # 一時使用ScoreHolderをリセット
 	execute if score $NSD.Value NSD.Temp matches ..2147483647 run scoreboard players reset $NSD.Value

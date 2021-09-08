@@ -23,6 +23,8 @@
 		execute if data storage necron: Accessory.tag.NSD.Status.MPRcvrPer run loot spawn ~ ~ ~ loot necron.player:accessory/mp.rcvr.per
 		execute if data storage necron: Accessory.tag.NSD.Status.DEF run loot spawn ~ ~ ~ loot necron.player:accessory/def
 		execute if data storage necron: Accessory.tag.NSD.Status.ATK run loot spawn ~ ~ ~ loot necron.player:accessory/atk
+		execute if data storage necron: Accessory.tag.NSD.Status.CritChance run loot spawn ~ ~ ~ loot necron.player:accessory/crit.chance
+		execute if data storage necron: Accessory.tag.NSD.Status.CritDamage run loot spawn ~ ~ ~ loot necron.player:accessory/crit.damage
 	# 説明を追加
 		execute as @e[type=minecraft:item,distance=..0.001] if data entity @s Item.tag.NsdRemove run data modify storage necron: Accessory.tag.display.Lore append from entity @s Item.tag.display.Name
 	# アイテムを消す
