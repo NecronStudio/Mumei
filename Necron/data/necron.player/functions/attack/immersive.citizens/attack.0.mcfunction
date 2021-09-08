@@ -5,6 +5,7 @@
 # @within function necron.player:attack/attack.0
  #declare tag MayBeDamaged
  #declare tag NSD.Damage
+
 # Damage Dealer
 summon armor_stand ~ ~ ~ {Tags:["NSD.Damage"],NoGravity:1b,Invisible:1b,Marker:1b}
 execute store result score @e[type=armor_stand,tag=NSD.Damage,sort=nearest,limit=1] NSD.Dealt.0 run scoreboard players get @s NSD.ATK

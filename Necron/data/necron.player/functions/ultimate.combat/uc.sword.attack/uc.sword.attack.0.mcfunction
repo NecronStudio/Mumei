@@ -4,6 +4,7 @@
 #
 # @within function necron.player:ultimate.combat/uc.sword
  #declare tag NSD.UC.Sword.Motion.0
+
 # Citizens for detecting at attacked
 scoreboard players add @s NSD.UC.Count.0 1
 

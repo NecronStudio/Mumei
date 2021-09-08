@@ -3,6 +3,9 @@
 # 
 #
 # @within function necron.core:tick
+# Citizens for bug 
+execute as @e[type=!player] at @s run data modify entity @s Fire set value 0s
+execute as @e[type=!player] at @s run data modify entity @s FallDistance set value 0s
 
 # Settings
 attribute @s minecraft:generic.attack_damage base set 0.000001
@@ -11,7 +14,7 @@ execute as @e[type=!player,type=!item,type=!armor_stand,distance=..10] run attri
 execute as @e[type=!player,type=!item,type=!armor_stand,distance=..10] run attribute @s minecraft:generic.armor_toughness base set -2147483647
 execute as @e[type=!player,type=!item,type=!armor_stand,distance=..10] if data entity @s ArmorItems[{}].tag.Enchantments[{id:"minecraft:protection"}] run function necron.player:attack/immersive.citizens/delete_enchantments
 
-# Citizens(Command) Detect at players attacked  
+# Citizens Detect at players attacked  
 execute store result score @e[type=!player,distance=..7] NSD.Detection.2 run data get entity @s Health 1000000
 execute store result score @e[type=!player,distance=..7] NSD.Detection.0 run data get entity @s Health 1
 execute if score @s NSD.Dealt.0 matches 1.. run function necron.player:attack/immersive.citizens/attack.0
