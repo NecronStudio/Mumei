@@ -7,6 +7,7 @@
 scoreboard players operation @s NSD.GotDamaged /= @s NSD.Protection.0
 scoreboard players operation $NSD.Citizens.HP.0 NSD.Temp = @s NSD.HP
 scoreboard players operation $NSD.Citizens.HP.1 NSD.Temp = @s NSD.HP
+scoreboard players operation $NSD.Citizens.HP.2 NSD.Temp = @s NSD.HP
 scoreboard players operation $NSD.DEF NSD.Temp = @s NSD.DEF
 scoreboard players operation $NSD.DEF NSD.Temp += $NSD.100 NSD.Const
 scoreboard players operation $NSD.DEF NSD.Temp /= $NSD.100 NSD.Const
@@ -21,6 +22,8 @@ scoreboard players operation $NSD.Citizens.HP.0 NSD.Temp *= $NSD.100 NSD.Const
 scoreboard players operation $NSD.Citizens.HP.0 NSD.Temp /= $NSD.Citizens.HP.1 NSD.Temp
 scoreboard players operation @s NSD.HP *= $NSD.Citizens.HP.0 NSD.Temp
 scoreboard players operation @s NSD.HP /= $NSD.100 NSD.Const
+scoreboard players operation $NSD.Citizens.HP.2 NSD.Temp -= @s NSD.HP
+execute as @s[tag=NSD.ShowDealt] if score @s NSD.Damaged.0 matches 1.. run tellraw @s [{"text":"<<< ","color":"white"},{"score":{"name":"$NSD.Citizens.HP.2","objective":"NSD.Temp"},"color":"red"},{"text":"ダメージ","color":"white"}]
 execute if score @s NSD.HP matches ..0 run kill @s
 execute if score @s NSD.HP matches ..0 run scoreboard players operation @s NSD.HP = @s NSD.HP.Max
 function necron.core:2s.tick

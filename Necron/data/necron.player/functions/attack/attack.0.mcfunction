@@ -4,8 +4,8 @@
 #
 # @within function necron.core:tick
 # Citizens for bug 
-execute as @e[type=!player] at @s run data modify entity @s Fire set value 0s
-execute as @e[type=!player] at @s run data modify entity @s FallDistance set value 0s
+#execute as @e[type=!player] at @s run data modify entity @s Fire set value 0s
+#execute as @e[type=!player] at @s run data modify entity @s FallDistance set value 0s
 
 # Settings
 attribute @s minecraft:generic.attack_damage base set 0.000001

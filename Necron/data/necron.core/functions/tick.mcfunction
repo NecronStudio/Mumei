@@ -23,5 +23,8 @@
 # Ultimate Combat	
 	execute as @a at @s run function necron.player:ultimate.combat/ultimate.combat
 	
+# Colorful Magic
+	execute as @a at @s run function necron.player:necron.magic/necron.magic
+
 # プレイヤーで常時実行
 	execute as @a run function necron.player:tick
