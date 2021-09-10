@@ -76,5 +76,5 @@
 	execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritDamage store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:11b}].tag.NSD.Status.CritDamage
 	# 前に持っていた値より大きかったら
 	execute if data storage necron: Items[{Slot:11b}].tag.NSD.Status.CritDamage unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/finger/crit.damage/add
-# 一時使用ScoreHolderをリセット
+# スコアを持っているとバグるので、スコアをリセット
 	execute if score $NSD.Value NSD.Temp matches ..2147483647 run scoreboard players reset $NSD.Value

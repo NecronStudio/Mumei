@@ -11,4 +11,4 @@
 # 追加最大魔力を保存
 	execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Necklace.MPMax int 1 run scoreboard players get $NSD.Amount NSD.Temp
 # 変えたことを記録
-	execute unless score $NSD.Success NSD.Temp matches 1 run scoreboard players set $NSD.Success NSD.Temp 1
+	execute unless score $NSD.Put.On NSD.Temp matches 1 run scoreboard players set $NSD.Put.On NSD.Temp 1

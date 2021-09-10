@@ -8,7 +8,6 @@
 #> Tag
 #@public
  #declare tag NSD.Player
-
 # プレイヤーのステータス
 	scoreboard players set @s NSD.Lv 1
 	## 体力
@@ -25,5 +24,7 @@
 		scoreboard players set @s NSD.ATK 1
 	## 防御力
 		scoreboard players set @s NSD.DEF 0
+# 表示を更新
+	function necron.core:2s.tick
 # 初期化完了
 	tag @s add NSD.Player

@@ -31,5 +31,5 @@
 	execute if data storage necron: Items[{Slot:103b}].tag.NSD.Status.DEF store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:103b}].tag.NSD.Status.DEF
 	# 前に持っていた値より大きかったら
 	execute if data storage necron: Items[{Slot:103b}].tag.NSD.Status.DEF unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/armor/head/def/add
-# 一時使用ScoreHolderをリセット
+# スコアを持っているとバグるので、スコアをリセット
 	execute if score $NSD.Value NSD.Temp matches ..2147483647 run scoreboard players reset $NSD.Value
