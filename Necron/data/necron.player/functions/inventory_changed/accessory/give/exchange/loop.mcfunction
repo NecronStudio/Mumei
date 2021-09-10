@@ -18,9 +18,9 @@
 # 説明を追加
 	# 説明を書いたアイテムを召喚
 		execute if data storage necron: Accessory.tag.NSD.Status.HPMax run loot spawn ~ ~ ~ loot necron.player:accessory/hp.max
-		execute if data storage necron: Accessory.tag.NSD.Status.HPRcvrPer run loot spawn ~ ~ ~ loot necron.player:accessory/hp.rcvr.per
+		execute if data storage necron: Accessory.tag.NSD.Status.HPRegPer run loot spawn ~ ~ ~ loot necron.player:accessory/hp.reg.per
 		execute if data storage necron: Accessory.tag.NSD.Status.MPMax run loot spawn ~ ~ ~ loot necron.player:accessory/mp.max
-		execute if data storage necron: Accessory.tag.NSD.Status.MPRcvrPer run loot spawn ~ ~ ~ loot necron.player:accessory/mp.rcvr.per
+		execute if data storage necron: Accessory.tag.NSD.Status.MPRegPer run loot spawn ~ ~ ~ loot necron.player:accessory/mp.reg.per
 		execute if data storage necron: Accessory.tag.NSD.Status.DEF run loot spawn ~ ~ ~ loot necron.player:accessory/def
 		execute if data storage necron: Accessory.tag.NSD.Status.ATK run loot spawn ~ ~ ~ loot necron.player:accessory/atk
 		execute if data storage necron: Accessory.tag.NSD.Status.CritChance run loot spawn ~ ~ ~ loot necron.player:accessory/crit.chance

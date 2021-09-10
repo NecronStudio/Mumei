@@ -22,15 +22,15 @@
 		### 体力
 			scoreboard objectives add NSD.HP dummy
 			scoreboard objectives add NSD.HP.Max dummy
-			scoreboard objectives add NSD.HP.Rcvr.Tmr dummy
-			scoreboard objectives add NSD.HP.Rcvr.Dur dummy
-			scoreboard objectives add NSD.HP.Rcvr.Per dummy
+			scoreboard objectives add NSD.HP.Reg.Tmr dummy
+			scoreboard objectives add NSD.HP.Reg.Dur dummy
+			scoreboard objectives add NSD.HP.Reg.Per dummy
 		### 魔力
 			scoreboard objectives add NSD.MP dummy
 			scoreboard objectives add NSD.MP.Max dummy
-			scoreboard objectives add NSD.MP.Rcvr.Tmr dummy
-			scoreboard objectives add NSD.MP.Rcvr.Dur dummy
-			scoreboard objectives add NSD.MP.Rcvr.Per dummy
+			scoreboard objectives add NSD.MP.Reg.Tmr dummy
+			scoreboard objectives add NSD.MP.Reg.Dur dummy
+			scoreboard objectives add NSD.MP.Reg.Per dummy
 			scoreboard objectives add NSD.INT dummy
 		### 攻撃力
 			scoreboard objectives add NSD.ATK dummy

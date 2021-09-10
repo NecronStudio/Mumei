@@ -15,13 +15,13 @@
 		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.HPMax unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/neck/hp.max/add
 # 体力回復割合
 	# 追加値を取得
-		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.HPRcvrPer store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.HPRcvrPer
+		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.HPRegPer store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.HPRegPer
 	# 増加が無かったら
-		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.HPRcvrPer unless data storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRcvrPer run function necron.player:inventory_changed/accessory/status/neck/hp.rcvr.per/remove
+		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.HPRegPer unless data storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRegPer run function necron.player:inventory_changed/accessory/status/neck/hp.reg.per/remove
 	# 値を取得
-		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRcvrPer store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRcvrPer
+		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRegPer store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRegPer
 	# 前に持っていた値より大きかったら
-		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRcvrPer unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/neck/hp.rcvr.per/add
+		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.HPRegPer unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/neck/hp.reg.per/add
 # 最大魔力
 	# 追加値を取得
 		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPMax store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPMax
@@ -33,13 +33,13 @@
 		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.MPMax unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/neck/mp.max/add
 # 魔力回復割合
 	# 追加値を取得
-		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPRcvrPer store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPRcvrPer
+		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPRegPer store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPRegPer
 	# 増加が無かったら
-		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPRcvrPer unless data storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRcvrPer run function necron.player:inventory_changed/accessory/status/neck/mp.rcvr.per/remove
+		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.MPRegPer unless data storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRegPer run function necron.player:inventory_changed/accessory/status/neck/mp.reg.per/remove
 	# 値を取得
-		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRcvrPer store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRcvrPer
+		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRegPer store result score $NSD.Amount NSD.Temp run data get storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRegPer
 	# 前に持っていた値より大きかったら
-		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRcvrPer unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/neck/mp.rcvr.per/add
+		execute if data storage necron: Items[{Slot:9b}].tag.NSD.Status.MPRegPer unless score $NSD.Value NSD.Temp = $NSD.Amount NSD.Temp run function necron.player:inventory_changed/accessory/status/neck/mp.reg.per/add
 # 防御力
 	# 追加値を取得
 		execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.DEF store result score $NSD.Value NSD.Temp run data get storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.DEF
