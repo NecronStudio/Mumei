@@ -7,6 +7,6 @@
 # クリティカル確率を元に戻す
 	scoreboard players operation @s NSD.Crit.Chance -= $NSD.Value NSD.Temp
 # 追加クリティカル確率をリセット
-	data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Necklace.CritChance
+	data remove storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].NSD.Accessory.Neck.CritChance
 # 変えたことを記録
 	execute unless score $NSD.Took.Off NSD.Temp matches 1 run scoreboard players set $NSD.Took.Off NSD.Temp 1

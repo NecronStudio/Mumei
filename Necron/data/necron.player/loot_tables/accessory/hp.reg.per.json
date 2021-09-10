@@ -12,13 +12,13 @@
 							"entity": "this",
 							"name": [
 								{
-									"text": "MP回復割合 +",
-									"color": "aqua",
+									"text": "HP回復割合 +",
+									"color": "light_purple",
 									"italic": false
 								},
 								{
 									"storage": "necron:",
-									"nbt": "Accessory.tag.NSD.Status.MPRcvrPer"
+									"nbt": "Accessory.tag.NSD.Status.HPRegPer"
 								},
 								{
 									"text": "%"
