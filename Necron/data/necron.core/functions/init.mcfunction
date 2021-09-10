@@ -31,6 +31,7 @@
 			scoreboard objectives add NSD.MP.Rcvr.Tmr dummy
 			scoreboard objectives add NSD.MP.Rcvr.Dur dummy
 			scoreboard objectives add NSD.MP.Rcvr.Per dummy
+			scoreboard objectives add NSD.INT dummy
 		### 攻撃力
 			scoreboard objectives add NSD.ATK dummy
 			scoreboard objectives add NSD.Crit.Damage dummy
@@ -66,8 +67,12 @@
 		scoreboard objectives add NSD.UC.Count.0 dummy
 		scoreboard objectives add NSD.UC.Time.0 dummy
 		scoreboard objectives add NSD.UC.Jump.0 minecraft.custom:minecraft.jump
-	## Immersive Citizens Difficulter
+	## Immersive Citizens Difficult
 		scoreboard objectives add NSD.Difficulty dummy
+
+	## Colorful Magic
+		scoreboard objectives add NSD.Magic.Right minecraft.used:minecraft.carrot_on_a_stick
+		scoreboard objectives add NSD.Magic.Time.0 dummy
 #> ScoreHolder
 #@public
  #declare score_holder $NSD.-1
