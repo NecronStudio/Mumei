@@ -2,7 +2,7 @@
 #
 # 最後の処理
 #
-# @within function necron.player:weapon/*
+# @within function necron.player:weapon/**
 
 # 
 #> ScoreHolder
