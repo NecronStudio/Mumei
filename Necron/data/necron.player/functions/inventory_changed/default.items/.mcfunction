@@ -4,6 +4,10 @@
 #
 # @within function necron.player:inventory_changed/
 
+# 
+#> ScoreHolder
+#@within function necron.player:inventory_changed/default.items/**
+ #declare score_holder $NSD.Success
 # 登録されてない武器or防具
 	data modify storage necron: DamageItems append from storage necron: Items[{tag:{}}]
 	data remove storage necron: DamageItems[{tag:{NSD:{Status:{}}}}]
