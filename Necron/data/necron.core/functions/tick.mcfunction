@@ -6,6 +6,10 @@
 
 # Entityを初期化
 	execute as @e[type=#necron.entity:living,type=!minecraft:player,tag=!NSD.Entity] run function necron.entity:init
+# プレイヤーで常時実行
+	execute as @a at @s run function necron.player:tick
+# アイテムを投げている
+	execute as @e[type=minecraft:armor_stand,tag=NSD.IT] at @s run function necron.player:item.throwing/tick
 
 #  闇の一党
 	execute as @a at @s run function necron.player:damage.taken/protection
@@ -16,15 +20,8 @@
 # 攻撃
 	execute as @a at @s run function necron.player:attack/attack.0
 
-# 武器投げの会
-	execute as @a at @s if score @s NSD.WT.Sneak matches 1.. run function necron.player:weapon.throwing/weapon.throwing.0
-	execute as @e[type=armor_stand,tag=NSD.WT.0] at @s run function necron.player:weapon.throwing/weapon.throwing.1
-
 # Ultimate Combat	
 	execute as @a at @s run function necron.player:ultimate.combat/ultimate.combat
 	
 # Colorful Magic
 	execute as @a at @s run function necron.player:necron.magic/necron.magic
-
-# プレイヤーで常時実行
-	execute as @a at @s run function necron.player:tick
