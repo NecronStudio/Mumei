@@ -22,4 +22,4 @@
 # 表示を更新
 	function necron.core:2s.tick
 # 一時使用ScoreHolderをリセット
-	scoreboard players reset $NSD.HP.Max.Copy
+	scoreboard players reset $NSD.MP.Max.Copy

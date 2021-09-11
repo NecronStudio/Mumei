@@ -3,9 +3,12 @@
 # 
 #
 # @within function necron.player:attack/attack.0
+
+# 
+#> Tag
+#@private
  #declare tag MayBeDamaged
  #declare tag NSD.Damage
-
 # Damage Dealer
 function necron.core:random/
 execute if score $NSD.Rand.Value NSD.Temp <= @s NSD.Crit.Chance run function necron.player:attack/immersive.citizens/attack.4

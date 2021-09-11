@@ -9,6 +9,10 @@
 #@public
  #declare storage necron:
  #declare storage oh_my_dat:
+# 
+#> Tag
+#@public
+ #declare tag NSD.This
 # 初期化完了
 	data modify storage necron: Once set value 1b
 # 
@@ -40,7 +44,6 @@
 			scoreboard objectives add NSD.DEF dummy
 			scoreboard objectives add NSD.Crossbow.Use minecraft.used:minecraft.crossbow
 		#### Immersive Citizens Weapon Throwing
-			scoreboard objectives add NSD.WT.Sneak minecraft.custom:minecraft.sneak_time
 			scoreboard objectives add NSD.S dummy
 			
 	## Immersive Citizens Damage Taken

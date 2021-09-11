@@ -18,6 +18,8 @@
 # 魔力を回復
 	execute if score @s NSD.MP < @s NSD.MP.Max run scoreboard players add @s NSD.MP.Reg.Tmr 1
 	execute if score @s NSD.MP.Reg.Tmr >= @s NSD.MP.Reg.Dur run function necron.player:regenerate/mp
+# アイテム投げの会
+	execute if predicate necron.player:sneak anchored eyes if entity @e[type=minecraft:item,nbt={Age:0s},distance=..1] run function necron.player:item.throwing/first/
 # 武器
 	## 持っていたら
 		execute if data entity @s {SelectedItem:{tag:{NSD:{Slot:["Mainhand"]}}}} run function necron.player:weapon/mainhand/
