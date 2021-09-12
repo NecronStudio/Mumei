@@ -19,6 +19,8 @@
 	execute as @e[type=minecraft:armor_stand,tag=NSD.AS.First,distance=..0.001] run data modify entity @s Motion set from entity @e[type=minecraft:area_effect_cloud,tag=NSD.AECMotion,limit=1] Pos
 # アイテムを渡す
 	execute as @e[type=minecraft:armor_stand,tag=NSD.AS.First] run data modify entity @s HandItems[0] set from entity @e[type=minecraft:item,tag=NSD.Thrown,distance=..2,limit=1] Item
+# Tagを外す
+	tag @e[type=minecraft:armor_stand,tag=NSD.AS.First,distance=..1] remove NSD.AS.First
 # 要らないEntityを消す
 	kill @e[type=minecraft:item,tag=NSD.Thrown,distance=..1]
 	execute positioned 0.00 0.00 0.00 run kill @e[type=minecraft:area_effect_cloud,tag=NSD.AECMotion,distance=..3]
