@@ -19,9 +19,9 @@
 	function necron.core:random/
 # 追加効果が重なっていたら
 	execute if score $NSD.Rand.Value NSD.Temp matches 0 if data storage necron: Accessory.tag.NSD.Status.HPMax run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
-	execute if score $NSD.Rand.Value NSD.Temp matches 1 if data storage necron: Accessory.tag.NSD.Status.HPRcvrPer run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
+	execute if score $NSD.Rand.Value NSD.Temp matches 1 if data storage necron: Accessory.tag.NSD.Status.HPRegPer run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
 	execute if score $NSD.Rand.Value NSD.Temp matches 2 if data storage necron: Accessory.tag.NSD.Status.MPMax run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
-	execute if score $NSD.Rand.Value NSD.Temp matches 3 if data storage necron: Accessory.tag.NSD.Status.MPRcvrPer run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
+	execute if score $NSD.Rand.Value NSD.Temp matches 3 if data storage necron: Accessory.tag.NSD.Status.MPRegPer run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
 	execute if score $NSD.Rand.Value NSD.Temp matches 4 if data storage necron: Accessory.tag.NSD.Status.DEF run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
 	execute if score $NSD.Rand.Value NSD.Temp matches 5 if data storage necron: Accessory.tag.NSD.Status.ATK run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
 	execute if score $NSD.Rand.Value NSD.Temp matches 6 if data storage necron: Accessory.tag.NSD.Status.CritChance run function necron.player:inventory_changed/accessory/give/exchange/overlaped.loop
@@ -31,9 +31,9 @@
 	execute if score $NSD.Rand.Value NSD.Temp matches 2 run scoreboard players operation $NSD.Value NSD.Temp *= $NSD.10 NSD.Const
 # 追加効果を付ける
 	execute if score $NSD.Rand.Value NSD.Temp matches 0 store result storage necron: Accessory.tag.NSD.Status.HPMax int 1 run scoreboard players get $NSD.Value NSD.Temp
-	execute if score $NSD.Rand.Value NSD.Temp matches 1 store result storage necron: Accessory.tag.NSD.Status.HPRcvrPer int 1 run scoreboard players get $NSD.Value NSD.Temp
+	execute if score $NSD.Rand.Value NSD.Temp matches 1 store result storage necron: Accessory.tag.NSD.Status.HPRegPer int 1 run scoreboard players get $NSD.Value NSD.Temp
 	execute if score $NSD.Rand.Value NSD.Temp matches 2 store result storage necron: Accessory.tag.NSD.Status.MPMax int 1 run scoreboard players get $NSD.Value NSD.Temp
-	execute if score $NSD.Rand.Value NSD.Temp matches 3 store result storage necron: Accessory.tag.NSD.Status.MPRcvrPer int 1 run scoreboard players get $NSD.Value NSD.Temp
+	execute if score $NSD.Rand.Value NSD.Temp matches 3 store result storage necron: Accessory.tag.NSD.Status.MPRegPer int 1 run scoreboard players get $NSD.Value NSD.Temp
 	execute if score $NSD.Rand.Value NSD.Temp matches 4 store result storage necron: Accessory.tag.NSD.Status.DEF int 1 run scoreboard players get $NSD.Value NSD.Temp
 	execute if score $NSD.Rand.Value NSD.Temp matches 5 store result storage necron: Accessory.tag.NSD.Status.ATK int 1 run scoreboard players get $NSD.Value NSD.Temp
 	execute if score $NSD.Rand.Value NSD.Temp matches 6 store result storage necron: Accessory.tag.NSD.Status.CritChance int 1 run scoreboard players get $NSD.Value NSD.Temp

@@ -9,6 +9,10 @@
 #@public
  #declare storage necron:
  #declare storage oh_my_dat:
+# 
+#> Tag
+#@public
+ #declare tag NSD.This
 # 初期化完了
 	data modify storage necron: Once set value 1b
 # 
@@ -22,15 +26,15 @@
 		### 体力
 			scoreboard objectives add NSD.HP dummy
 			scoreboard objectives add NSD.HP.Max dummy
-			scoreboard objectives add NSD.HP.Rcvr.Tmr dummy
-			scoreboard objectives add NSD.HP.Rcvr.Dur dummy
-			scoreboard objectives add NSD.HP.Rcvr.Per dummy
+			scoreboard objectives add NSD.HP.Reg.Tmr dummy
+			scoreboard objectives add NSD.HP.Reg.Dur dummy
+			scoreboard objectives add NSD.HP.Reg.Per dummy
 		### 魔力
 			scoreboard objectives add NSD.MP dummy
 			scoreboard objectives add NSD.MP.Max dummy
-			scoreboard objectives add NSD.MP.Rcvr.Tmr dummy
-			scoreboard objectives add NSD.MP.Rcvr.Dur dummy
-			scoreboard objectives add NSD.MP.Rcvr.Per dummy
+			scoreboard objectives add NSD.MP.Reg.Tmr dummy
+			scoreboard objectives add NSD.MP.Reg.Dur dummy
+			scoreboard objectives add NSD.MP.Reg.Per dummy
 			scoreboard objectives add NSD.INT dummy
 		### 攻撃力
 			scoreboard objectives add NSD.ATK dummy
@@ -40,7 +44,6 @@
 			scoreboard objectives add NSD.DEF dummy
 			scoreboard objectives add NSD.Crossbow.Use minecraft.used:minecraft.crossbow
 		#### Immersive Citizens Weapon Throwing
-			scoreboard objectives add NSD.WT.Sneak minecraft.custom:minecraft.sneak_time
 			scoreboard objectives add NSD.S dummy
 			
 	## Immersive Citizens Damage Taken

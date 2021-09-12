@@ -18,7 +18,6 @@
 	scoreboard players operation $NSD.Rand.Current NSD.Global *= $NSD.31743 NSD.Const
 	scoreboard players operation $NSD.Rand.Current NSD.Global += $NSD.Rand.Carry NSD.Global
 	scoreboard players operation $NSD.Rand.Carry NSD.Global = $NSD.Rand.Current NSD.Global
-
 	execute store result score $NSD.Rand.Value NSD.Temp run scoreboard players operation $NSD.Rand.Current NSD.Global %= $NSD.2^16 NSD.Const
 
 	scoreboard players operation $NSD.Rand.Carry NSD.Global /= $NSD.2^16 NSD.Const
