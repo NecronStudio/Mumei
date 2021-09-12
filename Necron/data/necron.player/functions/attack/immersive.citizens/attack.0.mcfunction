@@ -47,3 +47,5 @@ execute as @e[type=!player,tag=MayBeDamaged,distance=..7] run data modify entity
 kill @e[type=armor_stand,tag=NSD.Damage]
 tag @e[tag=MayBeDamaged] remove MayBeDamaged
 scoreboard players reset @s NSD.Dealt.0
+scoreboard players reset $NSD.Rand.Value NSD.Temp
+scoreboard players reset $NSD.Rand.Max NSD.Temp

@@ -1,4 +1,4 @@
-#> necron.player:necron.magic/particles/end_rod_circle
+#> necron.player:necron.magic/magic.particles/end_rod_circle
 #
 # 
 #

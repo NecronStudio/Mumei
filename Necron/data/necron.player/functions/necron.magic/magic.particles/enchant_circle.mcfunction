@@ -1,4 +1,4 @@
-#> necron.player:necron.magic/particles/enchant_circle
+#> necron.player:necron.magic/magic.particles/enchant_circle
 #
 # 
 #

@@ -1,4 +1,4 @@
-#> necron.player:necron.magic/particles/black_circle
+#> necron.player:necron.magic/magic.particles/black_circle
 #
 # 
 #
