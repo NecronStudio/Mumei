@@ -1,8 +1,8 @@
-#> necron.player:necron.magic/lahab/set
+#> necron.player:necron.magic/magics/lahab/set
 #
 # 
 #
-# @within function necron.player:necron.magic/lahab/tick
+# @within function necron.player:necron.magic/magics/lahab/tick
 
 # アマスタの召喚
 summon armor_stand ~ ~ ~ {Tags:["NSD.Lahab.Main","NSD.Magic.Public"],Invisible:1b,Small:1b}
@@ -18,11 +18,6 @@ tp @e[type=armor_stand,tag=NSD.Lahab.Main,distance=..0.01,sort=nearest,limit=1] 
 
 # 音
 playsound minecraft:entity.blaze.shoot player @s ~ ~ ~ 2 1
-
-# パーティクル
-
-#execute positioned ^ ^1 ^0.7 run function necron.player:necron.magic/particles/end_rod_circle
-#execute positioned ^ ^1 ^1.5 run function necron.player:necron.magic/particles/happy_villager_circle
 
 # マナけしけし
 scoreboard players remove @s NSD.MP 10

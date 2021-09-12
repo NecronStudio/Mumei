@@ -76,6 +76,7 @@
 	## Colorful Magic
 		scoreboard objectives add NSD.Magic.Right minecraft.used:minecraft.carrot_on_a_stick
 		scoreboard objectives add NSD.Magic.Time.0 dummy
+		scoreboard objectives add NSD.Magic.Cool.0 dummy
 #> ScoreHolder
 #@public
  #declare score_holder $NSD.-1

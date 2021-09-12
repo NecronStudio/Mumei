@@ -1,4 +1,4 @@
-#> necron.player:necron.magic/particles/happy_villager_circle
+#> necron.player:necron.magic/magic.particles/happy_villager_circle
 #
 # 
 #

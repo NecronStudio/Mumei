@@ -1,4 +1,4 @@
-#> necron.player:necron.magic/particles/witch_circle
+#> necron.player:necron.magic/magic.particles/witch_circle
 #
 # 
 #
