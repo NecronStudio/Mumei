@@ -13,6 +13,8 @@ function necron.player:necron.magic/calculators/calculate.int
 
 # アマスタ移動
 execute as @e[tag=NSD.Aljalid.Main,distance=..0.01,sort=nearest,limit=1] at @s run tp @s @e[tag=NSD.Magic.Public.Above,sort=nearest,limit=1]
+
+# パーティクル (アマスタ)
 execute as @e[tag=NSD.Magic.Public.Above,sort=nearest,limit=1] at @s run function necron.player:necron.magic/magic.particles/water_magic_array
 # 音
 function necron.player:necron.magic/magic.sounds/ice_magic
