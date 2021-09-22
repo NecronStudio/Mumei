@@ -11,7 +11,9 @@
  #declare score_holder $NSD.Rand.Carry
 # 
 #> ScoreHolder
-#@public
+#@within function necron.core:**
+#@within function necron.entity:**
+#@within function necron.player:**
  #declare score_holder $NSD.Rand.Max
  #declare score_holder $NSD.Rand.Value
 # 計算

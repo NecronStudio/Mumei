@@ -6,18 +6,24 @@
 
 # 
 #> Storage
-#@public
+#@within function necron.core:**
+#@within function necron.entity:**
+#@within function necron.player:**
  #declare storage necron:
  #declare storage oh_my_dat:
 # 
 #> Tag
-#@public
+#@within function necron.core:**
+#@within function necron.entity:**
+#@within function necron.player:**
  #declare tag NSD.This
 # 初期化完了
 	data modify storage necron: Once set value 1b
 # 
 #> Scoreboard
-#@public
+#@within function necron.core:**
+#@within function necron.entity:**
+#@within function necron.player:**
 	scoreboard objectives add NSD.Global dummy
 	scoreboard objectives add NSD.Temp dummy
 	scoreboard objectives add NSD.Const dummy
@@ -45,7 +51,6 @@
 			scoreboard objectives add NSD.Crossbow.Use minecraft.used:minecraft.crossbow
 		#### Immersive Citizens Weapon Throwing
 			scoreboard objectives add NSD.S dummy
-			
 	## Immersive Citizens Damage Taken
 		scoreboard objectives add NSD.Health.0 dummy
 		scoreboard objectives add NSD.Attribute.0 dummy
@@ -57,14 +62,12 @@
 		scoreboard objectives add NSD.ActiveEffect dummy
 		scoreboard objectives add NSD.GotDamaged dummy
 		scoreboard objectives add NSD.Fuse dummy
-		
 	## Immersive Citizens Attack Dealt
 		scoreboard objectives add NSD.Dealt.0 minecraft.custom:minecraft.damage_dealt
 		scoreboard objectives add NSD.Detection.0 dummy
 		scoreboard objectives add NSD.Detection.1 dummy
 		scoreboard objectives add NSD.Detection.2 dummy
 		scoreboard objectives add NSD.Bow.Use minecraft.used:minecraft.bow
-
 	## Ultimate Combat
 		scoreboard objectives add NSD.UC.Dealt.0 minecraft.custom:minecraft.damage_dealt
 		scoreboard objectives add NSD.UC.Count.0 dummy
@@ -72,13 +75,14 @@
 		scoreboard objectives add NSD.UC.Jump.0 minecraft.custom:minecraft.jump
 	## Immersive Citizens Difficult
 		scoreboard objectives add NSD.Difficulty dummy
-
 	## Colorful Magic
 		scoreboard objectives add NSD.Magic.Right minecraft.used:minecraft.carrot_on_a_stick
 		scoreboard objectives add NSD.Magic.Time.0 dummy
 		scoreboard objectives add NSD.Magic.Cool.0 dummy
 #> ScoreHolder
-#@public
+#@within function necron.core:**
+#@within function necron.entity:**
+#@within function necron.player:**
  #declare score_holder $NSD.-1
  #declare score_holder $NSD.-2
  #declare score_holder $NSD.10
